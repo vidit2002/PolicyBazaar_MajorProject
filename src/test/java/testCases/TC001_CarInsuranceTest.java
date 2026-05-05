@@ -25,7 +25,7 @@ public class TC001_CarInsuranceTest extends BaseClass{
 		ci.setInvalidFullName(p.getProperty("invalidName"));
 		ci.setInvalidPhoneNo(p.getProperty("invalidphoneNo"));
 		
-		new BaseClass().captureScreenshot();
+		//new BaseClass().captureScreenshot();
 		
 	}
 

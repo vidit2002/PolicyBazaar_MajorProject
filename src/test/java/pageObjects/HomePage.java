@@ -18,7 +18,7 @@ public class HomePage extends BasePageClass{
 	@FindBy(xpath = "//i[contains(@class,'icon-bg-new ti')]")
 	WebElement travelInsurance;
 	
-	@FindBy(xpath = "//i[contains(@class,'health-insurance')]")
+	@FindBy(xpath = "//a[.//p[contains(.,'Health')]]")
 	WebElement healthInsurance;
 	
 	//Actions

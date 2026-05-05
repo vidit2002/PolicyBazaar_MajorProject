@@ -38,7 +38,7 @@ public class BaseClass {
 		driver.quit();
 	}
 
-	public String captureScreenshot()
+	public String captureScreenshot(String tname) throws IOException
 	{
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		

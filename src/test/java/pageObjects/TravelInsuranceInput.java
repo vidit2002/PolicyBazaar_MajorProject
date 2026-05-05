@@ -1,9 +1,12 @@
 package pageObjects;
 
-import org.openqa.selenium.JavascriptExecutor;
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TravelInsuranceInput extends BasePageClass {
 
@@ -51,7 +54,7 @@ public class TravelInsuranceInput extends BasePageClass {
 	
 	public void selectstartDate()
 	{
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", selectStartDate);
+		js.executeScript("arguments[0].click();", selectStartDate);
 	}
 	
 	/*public void clickNext()
@@ -71,12 +74,15 @@ public class TravelInsuranceInput extends BasePageClass {
 	
 	public void selectEditTravellers()
 	{
-		js.executeScript("arguments[0].click();", clickDone);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.elementToBeClickable(selectEditTravellers));
+		selectEditTravellers.click();
+
 	}
 	
 	public void selectNoOfPassengers()
 	{
-		selectNoOfPassengers.click();
+		js.executeScript("arguments[0].click();", selectNoOfPassengers);
 	}
 	
 	
